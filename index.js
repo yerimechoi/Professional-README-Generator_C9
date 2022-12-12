@@ -21,7 +21,7 @@ function questions(){
     },
     { 
       type: 'input',
-      message: 'Insert a mockup for this project and enter what this mockup shows',
+      message: 'Enter what this mockup shows and insert a mockup gif or a screenshot',
       name: 'mockUp'
     },
     { 

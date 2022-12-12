@@ -49,40 +49,39 @@ function generateMarkdown(data) {
   return `
   # ${data.title}
   
-  ## 1. Description
+  ## Description
   ${data.description}
 
   ## Table of Contents
-
   1. [ Installation Instructions ](#installationInstructions)
-  2. [ Mock Up ] (#mockUp)
+  2. [ Mock Up ](#mockUp)
   3. [ Usage ](#usage)
   4. [ Contributions ](#contributions)
   5. [ Test Instructions ](#testInstructions)
   6. [ License ](#license)
 
   <a name="installationInstructions"></a>
-  ## 1. Installation Instructions
+  ## Installation Instructions
   ${data.installationInstructions}
 
   <a name="mockUp"></a>
-  ## 2. Mock Up
+  ## Mock Up
   ${data.mockUp}
 
   <a name="usage"></a>
-  ## 3. Usage
+  ## Usage
   ${data.usage}
 
   <a name="contributions"></a>
-  ## 4. Contributions
+  ## Contributions
   ${data.contributions}
 
   <a name="testInstructions"></a>
-  ## 5. Test Instructions
+  ## Test Instructions
   ${data.testInstructions}
 
   <a name="license"></a>
-  ## 6. License
+  ## License
   ${renderLicenseBadge(data)}
   ${renderLicenseSection(data)}
   `
