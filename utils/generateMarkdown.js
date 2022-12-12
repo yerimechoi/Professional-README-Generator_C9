@@ -1,26 +1,15 @@
 function renderLicenseBadge(data) {
   if (data.license === 'Apache License 2.0') {
-    return `[![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-yellowgreen.svg)]`
+    return `[![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-yellowgreen.svg)](https://opensource.org/licenses/Apache-2.0)`
   } else if (data.license === 'MIT') {
-    return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]`
+    return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`
   } else if (data.license === 'ICS License') {
-    return `[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)]`
+    return `[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)`
   } else {
     return ""
   }
 };
 
-function renderLicenseLink(data) {
-  if (data.license === 'Apache License 2.0') {
-    return `https://opensource.org/licenses/Apache-2.0`
-  } else if (data.license === 'MIT') {
-    return `https://opensource.org/licenses/MIT`
-  } else if (data.license === 'ICS License') {
-    return `https://opensource.org/licenses/ISC`
-  } else {
-    return ""
-  }
-};
 
 function renderLicenseSection(data) {
   if (data.license === 'Apache License 2.0') {
@@ -56,7 +45,6 @@ function renderLicenseSection(data) {
   }  
 };
 
-// TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `
   # ${data.title}
@@ -67,32 +55,35 @@ function generateMarkdown(data) {
   ## Table of Contents
 
   1. [ Installation Instructions ](#installationInstructions)
-  2. [ Usage ](#usage)
-  3. [ Contributions ](#contributions)
-  4. [ Test Instructions ](#testInstructions)
-  5. [ License ](#license)
+  2. [ Mock Up ] (#mockUp)
+  3. [ Usage ](#usage)
+  4. [ Contributions ](#contributions)
+  5. [ Test Instructions ](#testInstructions)
+  6. [ License ](#license)
 
   <a name="installationInstructions"></a>
   ## 1. Installation Instructions
   ${data.installationInstructions}
 
+  <a name="mockUp"></a>
+  ## 2. Mock Up
+  ${data.mockUp}
+
   <a name="usage"></a>
-  ## 2. Usage
+  ## 3. Usage
   ${data.usage}
 
   <a name="contributions"></a>
-  ## 3. Contributions
+  ## 4. Contributions
   ${data.contributions}
 
   <a name="testInstructions"></a>
-  ## 4. Test Instructions
+  ## 5. Test Instructions
   ${data.testInstructions}
 
   <a name="license"></a>
-  ## 5. License
-  ${renderLicenseBadge}
-  ${data.license}
-  ${renderLicenseLink}
+  ## 6. License
+  ${renderLicenseBadge(data)}
   ${renderLicenseSection(data)}
   `
 };
