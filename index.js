@@ -17,7 +17,12 @@ function questions(){
     { 
       type: 'input',
       message: 'Enter the installation instructions for this project',
-      name: 'installation instructions'
+      name: 'installationInstructions'
+    },
+    { 
+      type: 'input',
+      message: 'Insert a mockup for this project and enter what this mockup shows',
+      name: 'mockUp'
     },
     { 
       type: 'input',
@@ -32,7 +37,7 @@ function questions(){
     {
       type: 'input',
       message: 'Enter test instructions for this project',
-      name: 'test instructions'
+      name: 'testInstructions'
     },
     {
       type: 'list',
@@ -53,16 +58,16 @@ function questions(){
   ])
 };
 
-function writeToFile(title, data){
-  fs.writeFile('README.md', data),
-    (err) => err ? console.error(err) : console.log(`${title}.md has been created.`);
+function generateREADME(title, data){
+  fs.writeFile('README.md', data,
+    (err) => err ? console.error(err) : console.log(`${title}.md has been created.`));
 };
 
-generateMarkdown(data);
-
 function init() {
-  let userInput = questions();
-  writeToFile((userInput.title),(generateMarkdown(userInput)));
+  let userInput = questions().then((answers)=>{
+    generateREADME((answers.title),(generateMarkdown(answers)));
+  })
+  
 };
 
 init();
