@@ -19,7 +19,7 @@
   <a name="mockUp"></a>
   ## Mock Up
   The following shows the creation of a README file through node js. 
-  ![MockUp](./assets/README.gif)
+  ![MockUp](./assets/demo.gif)
 
   <a name="usage"></a>
   ## Usage
