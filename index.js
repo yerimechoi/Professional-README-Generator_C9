@@ -43,7 +43,7 @@ function questions(){
       type: 'list',
       message: 'Choose a license for this project',
       name: 'license',
-      choices: ['Apache License 2.0', 'MIT License', 'Eclipse Public License 2.0', 'N/A']
+      choices: ['Apache License 2.0', 'MIT License', 'ISC License', 'N/A']
     },
     {
       type: 'input',
