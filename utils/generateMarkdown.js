@@ -12,7 +12,7 @@ function renderLicenseBadge(data) {
 
 
 function renderLicenseSection(data) {
-  if (data.license == 'Apache License 2.0') {
+  if (data.license === 'Apache License 2.0') {
     return `
     ### Apache License 2.0
     Copyright [2021] [ ${data.username} ]
@@ -22,7 +22,7 @@ function renderLicenseSection(data) {
     http://www.apache.org/licenses/LICENSE-2.0
 
     Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.]`
-  } else if (data.license == 'MIT') {
+  } else if (data.license === 'MIT') {
     return `
     ### MIT License
     Copyright <2021> < ${data.username} >
@@ -32,7 +32,7 @@ function renderLicenseSection(data) {
     The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
       
     THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.]`
-  } else if (data.license == 'ICS License') {
+  } else if (data.license === 'ISC License') {
     return `
     ISC License
     Copyright <2021> < ${data.username} >

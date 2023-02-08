@@ -18,12 +18,13 @@
 
   <a name="mockUp"></a>
   ## Mock Up
-  The following shows the creation of a README file through node js. 
+  The following shows the creation of a README file through node.js.   
   ![MockUp](./assets/demo.gif)
 
   <a name="usage"></a>
   ## Usage
   To access this project, you can click on the gitHub URL below and clone the repository to access locally. 
+  
   https://github.com/yerimechoi/Professional-README-Generator_C9
 
   <a name="contributions"></a>
